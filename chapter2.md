@@ -49,7 +49,7 @@ def gForce(___):
     g = ___
     return g
     
-# Fill in the underlined area with a code, so the variable type of gForce() fits into the print statement.
+# Fill in the underlined area with a specific code, so the variable type of gForce() fits into the print statement.
 print (___(gForce(10000000)))
 ```
 
