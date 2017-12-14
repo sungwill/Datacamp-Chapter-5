@@ -27,6 +27,10 @@ Power can be calculated with x1**x2 or math.pow(x1, x2).
 
 For example, 2**3 and math.pow(2, 3) both equal to 8.
 
+To change a variable type into a string type, put the variable inside str().
+
+For example, to change x = 6 into a string, type str(x).
+
 *** =pre_exercise_code
 ```{python}
 import math
@@ -44,7 +48,7 @@ def gForce(___):
     g = ___
     return g
     
-
+# Fill in the underlined area so the variable type of gForce() fits into the print statement.
 print ('The value is ' + ___(gForce(5)))
 ```
 
