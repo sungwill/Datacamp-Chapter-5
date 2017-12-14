@@ -142,8 +142,8 @@ print(str(timePeriod(0.5, 10000000)))
 *** =sct
 ```{python}
 Ex().check_function_def('timePeriod').multi(
-        check_args('length').is_default(),
-        check_args('height').is_default())
+        check_args(0).is_default(),
+        check_args(1).is_default())
         
 test_student_typed("math.pi", pattern = False, not_typed_msg = "An important math function is missing.")
 test_student_typed("math.sqrt", pattern = False, not_typed_msg = "An important math function is missing.")
