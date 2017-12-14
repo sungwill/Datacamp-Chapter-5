@@ -11,8 +11,9 @@ Angela wants to order a set of pizzas for a party. Each pizza has an original co
 However, the receipt doesn't display the total price of all the pizzas + toppings, so you will have to help Angela
 determine the total price she has to pay.
 
+Directions:
 - Add all the prices in pizzaList into sum using loop(s).
-- For maximum efficiency, Angela wants you to only use "for loop".
+- For maximum efficiency in this case, Angela wants you to only use "for loop".
 
 *** =hint
 To cover all the elements in pizzaList,
@@ -73,7 +74,7 @@ success_msg("Great Work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:4 key:f2ac4e01c6
-## More Fun with Pizza List
+## More Fun with Pizzas!
 
 
 *** =instructions
@@ -82,6 +83,7 @@ reduce her cost.
 
 Additionally, Angela wants you to add the pizza names to their prices
 
+Directions:
 - Remove the most expensive price from each list in pizzaList.
 - Add each element in pizzaNames to the 1st index of each list in pizzaList.
 - For example, the final result of the first 2 lists will look like this:
@@ -90,8 +92,13 @@ Additionally, Angela wants you to add the pizza names to their prices
 
 ['Tomato', 1.23, 3.21, 0.23, 0.75]
 
-*** =hint
+- You must use the list functions you learned to complete the task.
+- Again, only "for loop" is allowed for maximum efficiency in this case.
 
+*** =hint
+- Remove the maximum value in a list by calling list.remove(max(list))
+- Add an element to the 1st index by calling list.insert(index_number, object)
+- As for calling the objects in the pizzaNames list, you can them by using pizzaNames[pizzaList.index(list)])
 *** =pre_exercise_code
 ```{python}
 
@@ -116,6 +123,7 @@ print(pizzaList)
 
 *** =solution
 ```{python}
+# Both pizzaList and pizzaNames are given for you to solve this problem
 pizzaList = [[5.35, 2.43, 1.65],
              [6.56, 1.23, 3.21, 0.23, 0.75],
              [7.92, 1.74, 3.25],
@@ -123,20 +131,21 @@ pizzaList = [[5.35, 2.43, 1.65],
              
 pizzaNames = ['Hawaii', 'Tomato', 'Margarita', 'Hybrid']
 
+# Enter your solution here
 for x in pizzaList:
     x.remove(max(x))
     x.insert(0, pizzaNames[pizzaList.index(x)])
-
-
+    
+# Prints out the final list of pizzaList
 print(pizzaList)
 ```
 
 *** =sct
 ```{python}
 test_student_typed("for", pattern = False, not_typed_msg = "Make sure you are using the correct loop.")
-test_student_typed(".remove", pattern = False, not_typed_msg = "An important list function is missing.")
+test_student_typed(".remove(", pattern = False, not_typed_msg = "An important list function is missing.")
 test_student_typed("max(", pattern = False, not_typed_msg = "An important list function is missing.")
-test_student_typed(".insert", pattern = False, not_typed_msg = "An important list function is missing.")
+test_student_typed(".insert(", pattern = False, not_typed_msg = "An important list function is missing.")
 test_object('pizzaList',
             eq_condition="equal",
             do_eval=True,
