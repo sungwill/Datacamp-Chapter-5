@@ -73,7 +73,7 @@ success_msg("Great Work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:4 key:f2ac4e01c6
-## <<<New Exercise>>>
+## More Fun with Pizza List
 
 
 *** =instructions
@@ -131,7 +131,7 @@ print(pizzaList)
 test_student_typed(".remove", pattern = False, not_typed_msg = "Make sure you are using loops correctly.")
 test_student_typed("max(", pattern = False, not_typed_msg = "Make sure you are using loops correctly.")
 test_student_typed(".insert", pattern = False, not_typed_msg = "Make sure you are using loops correctly.")
-test_output_contains(str("[['Hawaii', 2.43, 1.65], ['Tomato', 1.23, 3.21, 0.23, 0.75], ['Margarita', 1.74, 3.25], ['Hybrid', 2.17, 3.82, 2.53]]"),
+test_output_contains(str([['Hawaii', 2.43, 1.65], ['Tomato', 1.23, 3.21, 0.23, 0.75], ['Margarita', 1.74, 3.25], ['Hybrid', 2.17, 3.82, 2.53]]),
                     pattern = True,
                     no_output_msg = "Incorrect! Make sure your loops have covered each element.")
 success_msg("Great Work!")
