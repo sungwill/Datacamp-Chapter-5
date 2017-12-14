@@ -118,6 +118,9 @@ def gForce(height):
     
 # Create the function timePeriod here
 
+
+# Function call - no need to change this
+print(str(timePeriod(0.5, 10000000)))
 ```
 
 *** =solution
