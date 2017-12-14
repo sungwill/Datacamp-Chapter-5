@@ -72,17 +72,18 @@ success_msg("Great Work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:2 key:f2ac4e01c6
+--- type:NormalExercise lang:python xp:100 skills:4 key:f2ac4e01c6
 ## <<<New Exercise>>>
 
 
 *** =instructions
-Unfortunately, the receipt soon got wet from a rainfall, and the names for each pizza became indistinguishable.
-Help Angela recover the pizza names by adding them into the pizza price list.
+Angela's brother agreed to pay the most expensive items for each pizza, so she can
+reduce her cost.
 
-Additionally, Angela wants you to remove the most expensive items from each list within pizzaList.
+Additionally, Angela wants you to add the pizza names to their prices
 
-- 
+- Remove the most expensive price from each list in pizzaList.
+- Add each element in pizzaNames to the 1st index of each list in pizzaList.
 
 *** =hint
 
@@ -93,7 +94,19 @@ Additionally, Angela wants you to remove the most expensive items from each list
 
 *** =sample_code
 ```{python}
+# Both pizzaList and pizzaNames are given for you to solve this problem
+pizzaList = [[5.35, 2.43, 1.65],
+             [6.56, 1.23, 3.21, 0.23, 0.75],
+             [7.92, 1.74, 3.25],
+             [6.59, 2.17, 3.82, 2.53]]
+             
+pizzaNames = ['Hawaii', 'Tomato', 'Margarita', 'Hybrid']
 
+# Enter your solution here
+
+
+# Prints out the final list of pizzaList
+print(pizzaList)
 ```
 
 *** =solution
@@ -106,12 +119,20 @@ pizzaList = [[5.35, 2.43, 1.65],
 pizzaNames = ['Hawaii', 'Tomato', 'Margarita', 'Hybrid']
 
 for x in pizzaList:
-    x.insert(0, pizzaList.index(x))
-    
+    x.remove(max(x))
+    x.insert(0, pizzaNames[pizzaList.index(x)])
+
+
 print(pizzaList)
 ```
 
 *** =sct
 ```{python}
-
+test_student_typed(".remove", pattern = False, not_typed_msg = "Make sure you are using loops correctly.")
+test_student_typed("max(", pattern = False, not_typed_msg = "Make sure you are using loops correctly.")
+test_student_typed(".insert", pattern = False, not_typed_msg = "Make sure you are using loops correctly.")
+test_output_contains("[['Hawaii', 2.43, 1.65], ['Tomato', 1.23, 3.21, 0.23, 0.75], ['Margarita', 1.74, 3.25], ['Hybrid', 2.17, 3.82, 2.53]]"),
+                    pattern = True,
+                    no_output_msg = "Incorrect! Make sure your loops have covered each element.")
+success_msg("Great Work!")
 ```
