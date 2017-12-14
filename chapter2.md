@@ -49,7 +49,7 @@ def gForce(___):
     g = ___
     return g
     
-# Fill in the underlined area so the variable type of gForce() fits into the print statement.
+# Fill in the underlined area with a code, so the variable type of gForce() fits into the print statement.
 print (___(gForce(10000000)))
 ```
 
@@ -93,7 +93,7 @@ Then, use the equation T = 2π * √(length / g)  to return the value of T in ti
 
 - √ = square root
 
-- Must use python MATH FUNCTIONS!
+- MUST use python MATH FUNCTIONS!
 
 *** =hint
 Call the gForce function to find the value of g.
