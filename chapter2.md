@@ -24,7 +24,7 @@ For example, 2**3 and math.pow(2, 3) both equal to 8.
 
 *** =pre_exercise_code
 ```{python}
-
+import math
 ```
 
 *** =sample_code
