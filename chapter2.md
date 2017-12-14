@@ -140,9 +140,8 @@ print(str(timePeriod(0.5, 10000000)))
 ```{python}
 Ex().check_function_def('timePeriod').multi(
         check_args('length').is_default(),
-        check_args('height').is_default().has_equal_value(),
-        check_args('*args', 'Something is wrong within function parameters.')
-        )
+        check_args('height').is_default())
+        
 test_student_typed("math.pi", pattern = False, not_typed_msg = "An important math function is missing.")
 test_student_typed("math.sqrt", pattern = False, not_typed_msg = "An important math function is missing.")
 success_msg("Great Work!")
