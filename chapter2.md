@@ -72,7 +72,7 @@ print ('If the person is at a height of 10000000 meters, gravitational force wou
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 #test_object("G", eq_condition="equal", do_eval=True, undefined_msg="Your string1 has not been defined", incorrect_msg="Your string1 is not initialized properly")
-test_output_contains('If the person is at a height of 10000000 meters, gravitational force would equal to ' + 31.8857024)
+test_output_contains('If the person is at a height of 10000000 meters, gravitational force would equal to ' + str('31.8857024'))
 
 ```
 
