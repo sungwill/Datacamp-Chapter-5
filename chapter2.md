@@ -36,6 +36,7 @@ def gForce(___):
     M = ___
     g = ___
     return g
+print ('The value is ' + str(gForce(5)))
 ```
 
 *** =solution
@@ -47,12 +48,15 @@ def gForce(height):
     M = 5.972 * math.pow(10, 24)
     g = (G * m * M) / math.pow(height, 2)
     return g
+print ('The value is ' + str(gForce(5)))
 ```
 
 *** =sct
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 #test_object("G", eq_condition="equal", do_eval=True, undefined_msg="Your string1 has not been defined", incorrect_msg="Your string1 is not initialized properly")
+test_output_contains('The value is 127542809600000.0', pattern=False, no_output_msg= "You have not printed the first instruction correctly")
+
 ```
 
 
