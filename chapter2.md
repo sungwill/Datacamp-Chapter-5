@@ -7,7 +7,7 @@ description : Insert the chapter description here
 
 
 *** =instructions
-Jack is now standing at an altitude anywhere on Earth, where gravitational force is not 9.81 m/s^2. Please create a function called Force that takes an integer, height, in its parameter. Then, use the equation (G * m * M) / height^2 to return the value of g.
+Jack is now standing at an altitude anywhere on Earth, where gravitational force is not 9.81 m/s^2. Please create a function called gForce that takes an integer called height in its parameter. Then, use the equation (G * m * M) / height^2 to return the value of g.
 
 G = 6.674 * 10^-11
 
@@ -24,12 +24,12 @@ For example, 2**3 and math.pow(2, 3) both equal to 8.
 
 *** =pre_exercise_code
 ```{python}
-import math
+
 ```
 
 *** =sample_code
 ```{python}
-import math
+
 def gForce(___):
     G = ___
     m = 8
@@ -41,7 +41,7 @@ print ('The value is ' + str(gForce(5)))
 
 *** =solution
 ```{python}
-import math
+
 def gForce(height):
     G = 6.674 * math.pow(10, -11)
     m = 8
