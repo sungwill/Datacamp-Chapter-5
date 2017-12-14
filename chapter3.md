@@ -84,6 +84,11 @@ Additionally, Angela wants you to add the pizza names to their prices
 
 - Remove the most expensive price from each list in pizzaList.
 - Add each element in pizzaNames to the 1st index of each list in pizzaList.
+- For example, the final result of the first 2 lists will look like this:
+
+['Hawaii', 2.43, 1.65]
+
+['Tomato', 1.23, 3.21, 0.23, 0.75]
 
 *** =hint
 
@@ -128,14 +133,15 @@ print(pizzaList)
 
 *** =sct
 ```{python}
-test_student_typed(".remove", pattern = False, not_typed_msg = "Make sure you are using loops correctly.")
-test_student_typed("max(", pattern = False, not_typed_msg = "Make sure you are using loops correctly.")
-test_student_typed(".insert", pattern = False, not_typed_msg = "Make sure you are using loops correctly.")
+test_student_typed("for", pattern = False, not_typed_msg = "Make sure you are using the correct loop.")
+test_student_typed(".remove", pattern = False, not_typed_msg = "An important list function is missing.")
+test_student_typed("max(", pattern = False, not_typed_msg = "An important list function is missing.")
+test_student_typed(".insert", pattern = False, not_typed_msg = "An important list function is missing.")
 test_object('pizzaList',
             eq_condition="equal",
             do_eval=True,
-            undefined_msg=None,
-            incorrect_msg=None)
+            undefined_msg="Check if pizzaList is defined.",
+            incorrect_msg="This pizzaList is not what Angela wants... Double check whether you have used the appropriate list functions.")
 
-success_msg("Great Work!")
+success_msg("Congratulations! You have completed Chapter 5!")
 ```
