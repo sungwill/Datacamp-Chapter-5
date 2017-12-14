@@ -31,8 +31,7 @@ pizzaList = [[5.35, 2.43, 1.65],
 sum = 0
              
 # Insert solution here
-for x in pizzaList:
-    sum += x
+
         
 # Display the sum
 print(sum)
@@ -49,8 +48,8 @@ sum = 0
              
 for x in pizzaList:
     sum += x
-    #for y in x:
-     #   sum += y
+    for y in x:
+        sum += y
         
 print(sum)
 ```
