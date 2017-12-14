@@ -20,14 +20,15 @@ g = (G * m * M) / height^2
 Additionally, if we want to print out the value of g,
 we have to call the function "gForce" in a print statement.
 However, the variable type of g doesn't seem to fit into the print statement.
+
 Please change the variable type of the result of gForce in the print statement.
 
 *** =hint
-Power can be calculated with x1**x2 or math.pow(x1, x2).
+- Power can be calculated with x1**x2 or math.pow(x1, x2).
 
 For example, 2**3 and math.pow(2, 3) both equal to 8.
 
-To change a variable type into a string type, put the variable inside str().
+- To change a variable type into a string type, put the variable inside str().
 
 For example, to change x = 6 into a string, type str(x).
 
@@ -49,7 +50,7 @@ def gForce(___):
     return g
     
 # Fill in the underlined area so the variable type of gForce() fits into the print statement.
-print ('The value is ' + ___(gForce(5)))
+print ('If the person is at a height of 10000000 meters, gravitational force would equal to ' + ___(gForce(10000000)))
 ```
 
 *** =solution
@@ -64,14 +65,14 @@ def gForce(height):
     g = (G * m * M) / math.pow(height, 2)
     return g
     
-print ('The value is ' + str(gForce(5)))
+print ('If the person is at a height of 10000000 meters, gravitational force would equal to ' + str(gForce(10000000)))
 ```
 
 *** =sct
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 #test_object("G", eq_condition="equal", do_eval=True, undefined_msg="Your string1 has not been defined", incorrect_msg="Your string1 is not initialized properly")
-test_output_contains('The value is 127542809600000.0', pattern=False, no_output_msg= "You have not printed the first instruction correctly")
+test_output_contains('If the person is at a height of 10000000 meters, gravitational force would equal to ' + 31.8857024)
 
 ```
 
