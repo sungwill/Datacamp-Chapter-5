@@ -7,7 +7,7 @@ description : Insert the chapter description here
 
 
 *** =instructions
-Jack is now standing at an altitude anywhere on Earth, where gravitational force is not 9.81 m/s^2. Please create a function called gForce that takes an integer, height, in its parameter. Then, use the equation (G * m * M) / height^2 to return the value of g.
+Jack is now standing at an altitude anywhere on Earth, where gravitational force is not 9.81 m/s^2. Please create a function called Force that takes an integer, height, in its parameter. Then, use the equation (G * m * M) / height^2 to return the value of g.
 
 G = 6.674 * 10^-11
 
@@ -61,21 +61,21 @@ test_object("G", eq_condition="equal", do_eval=True, undefined_msg="Your string1
 
 
 *** =instructions
-While at the same location, Jack happens to have a pendulum in his pocket, so he wants to measure the time needed for the pendulum to complete 1 period. Please create a function called timePeriod that takes in 2 parameters: an integer length and an integer height.
-Then, use the equation T = 2π * √(length / g)  to return the value of T in timePeriod.
+While at the same location, Jack happens to have a pendulum in his pocket, so he wants to measure the time needed for the pendulum to complete 1 period. Please create a function called time that takes in 2 parameters: an integer length and an integer height.
+Then, use the equation T = 2π * √(length / g)  to return the value of T in time.
 
-T = 2π * √(length / g)
+T = 2 * (length / g)
 
-√ = square root
+ = square root
 
 Must use python MATH FUNCTIONS!
 
 *** =hint
-Call the gForce function to find the value of g.
+Call the Force function to find the value of g.
 
 Use math.pi for π.
 
-Use math.sqrt(x) for √(length / g)
+Use math.sqrt(x) for(length / g)
 
 *** =pre_exercise_code
 ```{python}
