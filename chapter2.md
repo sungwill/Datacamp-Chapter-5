@@ -9,13 +9,13 @@ description : Insert the chapter description here
 *** =instructions
 Jack is now standing at an altitude anywhere on Earth, where gravitational force is not 9.81 m/s^2. Please use the function called gForce that takes an integer called "height" in its parameter. Then, use the equation (G * m * M) / height^2 to return the value of g.
 
-G = 6.674 * 10^-11
+- G = 6.674 * 10^-11
 
-m = 8
+- m = 8
 
-M = 5.972 * 10^24
+- M = 5.972 * 10^24
 
-g = (G * m * M) / height^2
+- g = (G * m * M) / height^2
 
 Additionally, if we want to print out the value of g,
 we have to call the function "gForce" in a print statement.
@@ -85,14 +85,15 @@ success_msg("Great Work!")
 
 
 *** =instructions
-While at the same location, Jack happens to have a pendulum in his pocket, so he wants to measure the time needed for the pendulum to complete 1 period. Please create a function called "timePeriod" that takes in 2 parameters: an integer length and an integer height.
+While at the same location, Jack happens to have a pendulum in his pocket, so he wants to measure the time needed for the pendulum to complete 1 period. Please create a function called "timePeriod" that takes in 2 parameters: "length" and "height".
+
 Then, use the equation T = 2π * √(length / g)  to return the value of T in timePeriod.
 
-T = 2π * √(length / g)
+- T = 2π * √(length / g)
 
-√ = square root
+- √ = square root
 
-Must use python MATH FUNCTIONS!
+- Must use python MATH FUNCTIONS!
 
 *** =hint
 Call the gForce function to find the value of g.
@@ -143,9 +144,10 @@ print(str(timePeriod(0.5, 10000000)))
 
 *** =sct
 ```{python}
+
 Ex().check_function_def('timePeriod').multi(
-        check_args(0).is_default(),
-        check_args(1).is_default())
+        check_args('length').is_default(),
+        check_args('height').is_default())
         
 test_student_typed("math.pi", pattern = False, not_typed_msg = "An important math function is missing.")
 test_student_typed("math.sqrt", pattern = False, not_typed_msg = "An important math function is missing.")
