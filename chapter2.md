@@ -52,7 +52,7 @@ def gForce(height):
 *** =sct
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
-test_object("G", eq_condition="equal", do_eval=True, undefined_msg="Your string1 has not been defined", incorrect_msg="Your string1 is not initialized properly")
+#test_object("G", eq_condition="equal", do_eval=True, undefined_msg="Your string1 has not been defined", incorrect_msg="Your string1 is not initialized properly")
 ```
 
 
@@ -114,7 +114,7 @@ def timePeriod(length, height):
 *** =sct
 ```{python}
 #test_function("timePeriod")
-test_student_typed("math.pi", pattern = False, not_typed_msg = "An important math function is missing.")
-test_student_typed("math.sqrt", pattern = False, not_typed_msg = "An important math function is missing.")
+#test_student_typed("math.pi", pattern = False, not_typed_msg = "An important math function is missing.")
+#test_student_typed("math.sqrt", pattern = False, not_typed_msg = "An important math function is missing.")
 success_msg("Great Work!")
 ```
