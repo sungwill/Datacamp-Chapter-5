@@ -2,12 +2,12 @@
 title       : Physics Application
 description : Insert the chapter description here
 
---- type:NormalExercise lang:python xp:100 skills:2 key:5ef0ed3dfd
+--- type:NormalExercise lang:python xp:100 skills:3 key:5ef0ed3dfd
 ## Gravitational Force
 
 
 *** =instructions
-Jack is now standing at an altitude anywhere on Earth, where gravitational force is not 9.81 m/s^2. Please create a function called gForce that takes an integer called height in its parameter. Then, use the equation (G * m * M) / height^2 to return the value of g.
+Jack is now standing at an altitude anywhere on Earth, where gravitational force is not 9.81 m/s^2. Please create a function called gForce that takes an integer called "height" in its parameter. Then, use the equation (G * m * M) / height^2 to return the value of g.
 
 G = 6.674 * 10^-11
 
@@ -16,6 +16,11 @@ m = 8
 M = 5.972 * 10^24
 
 g = (G * m * M) / height^2
+
+Additionally, if we want to print out the value of g,
+we have to call the function "gForce" in a print statement.
+However, the variable type of g doesn't seem to fit into the print statement.
+Please change the variable type of the result of gForce in the print statement.
 
 *** =hint
 Power can be calculated with x1**x2 or math.pow(x1, x2).
@@ -29,26 +34,33 @@ import math
 
 *** =sample_code
 ```{python}
+# No import is required
 
+# gForce has been defined for you, now fill in the following.
 def gForce(___):
     G = ___
     m = 8
     M = ___
     g = ___
     return g
-print ('The value is ' + str(gForce(5)))
+    
+
+print ('The value is ' + ___(gForce(5)))
 ```
 
 *** =solution
 ```{python}
+# No import is required
 
+# gForce has been defined for you, now fill in the following.
 def gForce(height):
     G = 6.674 * math.pow(10, -11)
     m = 8
     M = 5.972 * math.pow(10, 24)
     g = (G * m * M) / math.pow(height, 2)
     return g
-print ('The value is ' + str(gForce(5)))
+    
+print ('The value is ' + (gForce(5)))
 ```
 
 *** =sct
@@ -88,7 +100,6 @@ import math
 
 *** =sample_code
 ```{python}
-import math
 def gForce(height):
     G = 6.674 * math.pow(10, -11)
     m = 8
@@ -102,7 +113,6 @@ def gForce(height):
 
 *** =solution
 ```{python}
-import math
 def gForce(height):
     G = 6.674 * math.pow(10, -11)
     m = 8
