@@ -47,7 +47,6 @@ pizzaList = [[5.35, 2.43, 1.65],
 sum = 0
              
 for x in pizzaList:
-    sum += x
     for y in x:
         sum += y
         
