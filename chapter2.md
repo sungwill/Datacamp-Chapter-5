@@ -39,7 +39,7 @@ import math
 
 *** =sample_code
 ```{python}
-# No import is required
+# No import needed
 
 # gForce has been defined for you, now fill in the following.
 def gForce(___):
@@ -55,7 +55,7 @@ print (___(gForce(10000000)))
 
 *** =solution
 ```{python}
-# No import is required
+# No import needed
 
 # gForce has been defined for you, now fill in the following.
 def gForce(height):
@@ -108,6 +108,8 @@ import math
 
 *** =sample_code
 ```{python}
+# No import needed
+
 # gForce is given for you to solve this problem
 def gForce(height):
     G = 6.674 * math.pow(10, -11)
@@ -147,5 +149,8 @@ Ex().check_function_def('timePeriod').multi(
         
 test_student_typed("math.pi", pattern = False, not_typed_msg = "An important math function is missing.")
 test_student_typed("math.sqrt", pattern = False, not_typed_msg = "An important math function is missing.")
+test_output_contains(str('0.7868045746657087'),
+                    pattern = True,
+                    no_output_msg = "The answer is not right! Check your calculations again!")
 success_msg("Great Work!")
 ```
