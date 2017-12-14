@@ -11,7 +11,8 @@ Angela wants to order a set of pizzas for a party. Each pizza has an original co
 However, the receipt doesn't display the total price of all the pizzas + toppings, so you will have to help Angela
 determine the total price she has to pay.
 
-- For maximum efficiency, Angela wants you to only use "for loops".
+- Add all the prices in pizzaList into sum using loop(s).
+- For maximum efficiency, Angela wants you to only use "for loop".
 
 *** =hint
 To cover all the elements in pizzaList,
@@ -76,6 +77,12 @@ success_msg("Great Work!")
 
 
 *** =instructions
+Unfortunately, the receipt soon got wet from a rainfall, and the names for each pizza became indistinguishable.
+Help Angela recover the pizza names by adding them into the pizza price list.
+
+Additionally, Angela wants you to remove the most expensive items from each list within pizzaList.
+
+- 
 
 *** =hint
 
@@ -91,7 +98,17 @@ success_msg("Great Work!")
 
 *** =solution
 ```{python}
+pizzaList = [[5.35, 2.43, 1.65],
+             [6.56, 1.23, 3.21, 0.23, 0.75],
+             [7.92, 1.74, 3.25],
+             [6.59, 2.17, 3.82, 2.53]]
+             
+pizzaNames = ['Hawaii', 'Tomato', 'Margarita', 'Hybrid']
 
+for x in pizzaList:
+    x.insert(0, pizzaList.index(x))
+    
+print(pizzaList)
 ```
 
 *** =sct
