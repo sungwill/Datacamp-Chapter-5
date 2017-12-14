@@ -7,7 +7,7 @@ description : Insert the chapter description here
 
 
 *** =instructions
-Jack is now standing at an altitude anywhere on Earth, where gravitational force is not 9.81 m/s^2. Please create a function called gForce that takes an integer called "height" in its parameter. Then, use the equation (G * m * M) / height^2 to return the value of g.
+Jack is now standing at an altitude anywhere on Earth, where gravitational force is not 9.81 m/s^2. Please use the function called gForce that takes an integer called "height" in its parameter. Then, use the equation (G * m * M) / height^2 to return the value of g.
 
 G = 6.674 * 10^-11
 
@@ -50,7 +50,7 @@ def gForce(___):
     return g
     
 # Fill in the underlined area so the variable type of gForce() fits into the print statement.
-print ('If the person is at a height of 10000000 meters, gravitational force would equal to ' + ___(gForce(10000000)))
+print (___(gForce(10000000)))
 ```
 
 *** =solution
@@ -65,17 +65,18 @@ def gForce(height):
     g = (G * m * M) / math.pow(height, 2)
     return g
     
-print ('If the person is at a height of 10000000 meters, gravitational force would equal to ' + str(gForce(10000000)))
+print(str(gForce(10000000)))
 ```
 
 *** =sct
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
-#test_object("G", eq_condition="equal", do_eval=True, undefined_msg="Your string1 has not been defined", incorrect_msg="Your string1 is not initialized properly")
-test_output_contains('If the person is at a height of 10000000 meters, gravitational force would equal to ' + str('31.8857024'),
+
+test_output_contains(str('31.8857024'),
                     pattern = True,
                     no_output_msg = "The answer is not right! Check your calculations again!")
-
+                    
+success_msg("Great Work!")
 ```
 
 
@@ -84,21 +85,21 @@ test_output_contains('If the person is at a height of 10000000 meters, gravitati
 
 
 *** =instructions
-While at the same location, Jack happens to have a pendulum in his pocket, so he wants to measure the time needed for the pendulum to complete 1 period. Please create a function called time that takes in 2 parameters: an integer length and an integer height.
-Then, use the equation T = 2π * √(length / g)  to return the value of T in time.
+While at the same location, Jack happens to have a pendulum in his pocket, so he wants to measure the time needed for the pendulum to complete 1 period. Please create a function called "timePeriod" that takes in 2 parameters: an integer length and an integer height.
+Then, use the equation T = 2π * √(length / g)  to return the value of T in timePeriod.
 
-T = 2 * (length / g)
+T = 2π * √(length / g)
 
- = square root
+√ = square root
 
 Must use python MATH FUNCTIONS!
 
 *** =hint
-Call the Force function to find the value of g.
+Call the gForce function to find the value of g.
 
 Use math.pi for π.
 
-Use math.sqrt(x) for(length / g)
+Use math.sqrt(x) for square root.
 
 *** =pre_exercise_code
 ```{python}
@@ -107,6 +108,7 @@ import math
 
 *** =sample_code
 ```{python}
+# gForce is given for you to solve this problem
 def gForce(height):
     G = 6.674 * math.pow(10, -11)
     m = 8
@@ -130,12 +132,18 @@ def gForce(height):
 def timePeriod(length, height):
     T = 2 * math.pi * math.sqrt(length/gForce(height))
     return T
+    
+print(str(timePeriod(0.5, 10000000)))
 ```
 
 *** =sct
 ```{python}
-#test_function("timePeriod")
-#test_student_typed("math.pi", pattern = False, not_typed_msg = "An important math function is missing.")
-#test_student_typed("math.sqrt", pattern = False, not_typed_msg = "An important math function is missing.")
+Ex().check_function_def('timePeriod').multi(
+        check_args('length').is_default(),
+        check_args('height').is_default().has_equal_value(),
+        check_args('*args', 'Something is wrong within function parameters.')
+        )
+test_student_typed("math.pi", pattern = False, not_typed_msg = "An important math function is missing.")
+test_student_typed("math.sqrt", pattern = False, not_typed_msg = "An important math function is missing.")
 success_msg("Great Work!")
 ```
