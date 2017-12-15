@@ -150,7 +150,7 @@ test_object('pizzaList',
             eq_condition="equal",
             do_eval=True,
             undefined_msg="Check if pizzaList is defined.",
-            incorrect_msg="This pizzaList is not what Angela wants... Double check whether you have used the appropriate list functions.")
+            incorrect_msg="This pizzaList is not what Angela wants... Double check whether you have appropirately used list functions.")
 
 success_msg("Congratulations! You have completed Chapter 5!")
 ```
