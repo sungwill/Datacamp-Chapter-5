@@ -104,7 +104,7 @@ Then, use the equation T = 2π * √(length / g)  to return the value of T in ti
 
 *** =pre_exercise_code
 ```{python}
-import math
+
 ```
 
 *** =sample_code
