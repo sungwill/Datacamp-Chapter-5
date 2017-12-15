@@ -96,11 +96,11 @@ Then, use the equation T = 2π * √(length / g)  to return the value of T in ti
 - MUST use python MATH FUNCTIONS!
 
 *** =hint
-Call the gForce function to find the value of g.
+- Call the gForce function to find the value of g.
 
-Use math.pi for π.
+- Use math.pi for π.
 
-Use math.sqrt(x) for square root.
+- Use math.sqrt(x) for square root.
 
 *** =pre_exercise_code
 ```{python}

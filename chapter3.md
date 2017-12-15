@@ -16,7 +16,7 @@ Directions:
 - For maximum efficiency in this case, Angela wants you to only use "for loop".
 
 *** =hint
-To cover all the elements in pizzaList,
+- To cover all the elements in pizzaList,
 you need a nested loop, which can be created by using
 a for loop inside a for loop.
 
@@ -98,7 +98,7 @@ Directions:
 *** =hint
 - Remove the maximum value in a list by calling list.remove(max(list))
 - Add an element to the 1st index by calling list.insert(index_number, object)
-- As for calling the objects in the pizzaNames list, you can them by using pizzaNames[pizzaList.index(list)])
+- As for calling the objects in the pizzaNames list, you can call them by using pizzaNames[pizzaList.index(list)])
 *** =pre_exercise_code
 ```{python}
 
