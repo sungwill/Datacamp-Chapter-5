@@ -34,12 +34,12 @@ For example, to change x = 6 into a string, type str(x).
 
 *** =pre_exercise_code
 ```{python}
-import math
+
 ```
 
 *** =sample_code
 ```{python}
-# No import needed
+# Something is needed here to use math functions.
 
 # gForce has been defined for you, now fill in the following.
 def gForce(___):
@@ -55,7 +55,8 @@ print (___(gForce(10000000)))
 
 *** =solution
 ```{python}
-# No import needed
+# Something is needed here to use math functions.
+import math
 
 # gForce has been defined for you, now fill in the following.
 def gForce(height):
@@ -109,8 +110,8 @@ Then, use the equation T = 2π * √(length / g)  to return the value of T in ti
 
 *** =sample_code
 ```{python}
-# No import needed
 import math
+
 # gForce is given for you to solve this problem
 def gForce(height):
     G = 6.674 * math.pow(10, -11)
@@ -129,6 +130,8 @@ print(str(timePeriod(0.5, 10000000)))
 *** =solution
 ```{python}
 import math
+
+# gForce is given for you to solve this problem
 def gForce(height):
     G = 6.674 * math.pow(10, -11)
     m = 8
@@ -136,10 +139,13 @@ def gForce(height):
     g = (G * m * M) / math.pow(height, 2)
     return g
 
+# Create the function timePeriod here
 def timePeriod(length, height):
     T = 2 * math.pi * math.sqrt(length/gForce(height))
     return T
-    
+
+
+# Function call - no need to change this
 print(str(timePeriod(0.5, 10000000)))
 ```
 
