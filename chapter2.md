@@ -110,7 +110,7 @@ Then, use the equation T = 2π * √(length / g)  to return the value of T in ti
 *** =sample_code
 ```{python}
 # No import needed
-
+import math
 # gForce is given for you to solve this problem
 def gForce(height):
     G = 6.674 * math.pow(10, -11)
@@ -128,6 +128,7 @@ print(str(timePeriod(0.5, 10000000)))
 
 *** =solution
 ```{python}
+import math
 def gForce(height):
     G = 6.674 * math.pow(10, -11)
     m = 8
